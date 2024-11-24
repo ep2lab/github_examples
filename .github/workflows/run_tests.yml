@@ -26,7 +26,7 @@ jobs:
         - name: Run tests
           run: |
             if [ $RUNNER_OS == 'Windows' ]; then
-              set PYTHONPATH=${{ github.workspace }};${{ github.workspace }}/vectormath
+              set PYTHONPATH=${{ github.workspace }}/vectormath
               pytest tests
             else
               PYTHONPATH=. pytest tests
