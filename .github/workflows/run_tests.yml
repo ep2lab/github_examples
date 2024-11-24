@@ -26,7 +26,7 @@ jobs:
         - name: Run tests
           run: |
             if [ $RUNNER_OS == 'Windows' ]; then
-              $env:PYTHONPATH = "${{ github.workspace }}"
+              set PYTHONPATH=${{ github.workspace }}
               pytest tests
             else
               PYTHONPATH=. pytest tests
