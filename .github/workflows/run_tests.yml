@@ -31,3 +31,4 @@ jobs:
             else
               PYTHONPATH=. pytest tests
             fi
+          shell: bash
