@@ -1,1 +1,0 @@
-from .math_library import scalar_product, vector_product, matrix_product
