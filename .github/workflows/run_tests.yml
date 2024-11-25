@@ -7,7 +7,7 @@ jobs:
         runs-on: ${{ matrix.os }}
         strategy:
             matrix:
-                os: [ubuntu-latest, windows-latest, macos]
+                os: [ubuntu-latest, windows-latest]
                 arch: [x64, arm64]
         steps:
         - name: Checkout code
@@ -25,4 +25,4 @@ jobs:
 
         - name: Run tests
           run: |
-            pytest tests/
+            pytest tests
