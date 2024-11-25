@@ -14,3 +14,11 @@ def matrix_product(matrix1, matrix2):
                 result[i][j] += matrix1[i][k] * matrix2[k][j]
     
     return result
+def vector_product(vector1, vector2):
+    if len(vector1) != 3 or len(vector2) != 3:
+        raise ValueError("Both vectors must be of length 3")
+    return [
+        vector1[1] * vector2[2] - vector1[2] * vector2[1],
+        vector1[2] * vector2[0] - vector1[0] * vector2[2],
+        vector1[0] * vector2[1] - vector1[1] * vector2[0]
+    ]
